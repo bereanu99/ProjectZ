@@ -1,0 +1,14 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: #d1e3f3;
+}
+nav .navbar-nav li a {
+  color: #000000 !important;
+}
+nav .navbar-nav li a:hover {
+  color: #706b6b !important;
+  text-decoration: underline;
+  text-decoration-color: #009CDA;
+  text-decoration-style: solid 1px;
+}
