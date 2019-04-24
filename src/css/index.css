@@ -8,7 +8,8 @@ nav .navbar-nav li a {
 }
 nav .navbar-nav li a:hover {
   color: #706b6b !important;
-  text-decoration: underline;
-  text-decoration-color: #009CDA;
-  text-decoration-style: solid 1px;
+  padding-bottom: 0px;
+  border-bottom: 3px solid #007BFF;
+  transition: all 0.05s ease-out;
+  padding-top: 11px;
 }

@@ -1,5 +1,5 @@
 
-@blue-color: #009CDA;
+@blue-color: #007BFF;
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -13,7 +13,8 @@ nav .navbar-nav li a {
 
 nav .navbar-nav li a:hover{
     color:rgb(112, 107, 107) !important;
-    text-decoration: underline;
-    text-decoration-color:@blue-color;
-    text-decoration-style: solid 1px;
+    padding-bottom: 0px;
+    border-bottom: 3px solid @blue-color;
+    transition: all 0.05s ease-out;
+    padding-top: 11px;
 }
