@@ -1,39 +1,45 @@
 var app = angular.module('main',['ngRoute']);
 
-app.config(function($routeProvider){
+app.config(function($routeProvider,$locationProvider){
     $routeProvider.when('/',{
         templateUrl:'./pages/home.html',
         controller:'homeCtrl',
 
+    }).when('/home',{
+        templateUrl:'./pages/home.html',
+        controller:'homeCtrl',
+        
     }).when('/galerie',{
-        template:'./pages/galerie.html',
+        templateUrl:'./pages/galerie.html',
         controller:'galerieCtrl',
 
-    }).when('/evenimente.html',{
-        template:'./pages/evenimente.html',
+    }).when('/evenimente',{
+        templateUrl:'./pages/evenimente.html',
         controller:'evenimenteCtrl',
 
-    }).when('/contact.html',{
-        template:'./pages/contact.html',
+    }).when('/contact',{
+        templateUrl:'./pages/contact.html',
         controller:'contactCtrl',
-    }).otherwise({
-        template: '404',
     })
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+      });
 })
 
 
 app.controller('homeCtrl',function($scope,$location){
-    $scope.$location
+    $scope.message ="homeCTRl";
 })
 
 app.controller('galerieCtrl',function($scope,$location){
-    $scope.$location
+    $scope.message ="galerieCtrl";
 })
 
 app.controller('evenimenteCtrl',function($scope,$location){
-    $scope.$location
+    $scope.message ="evenimenteCtrl";
 })
 
 app.controller('contactCtrl',function($scope,$location){
-    $scope.$location
+    $scope.message ="contactCtrl";
 })

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="main">
 
 <head>
 
@@ -11,30 +11,20 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./src/css/index.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ <!-- Javascript -->
+  <script src="./angular.js"></script>
+  <script src="./angular-route.js"></script>
+  <script src="./script.js"></script>
+  <base href="/">
   <title>Hello, world!</title>
 </head>
 
 <body>
  
     <div ng-include="'/components/navbar.html'" ></div>
-  <div class="jumbotron">
-      <h1 class="display-4">Hello, world!</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </div>
-    
+ 
 
-  <div ng-view id="mainContent">
-
-    <div ng-include="'/components/navbar.html'" ></div>
-
-  </div>
-  <!-- Optional JavaScript -->
-  <script src="./angular.js"></script>
-  <script src="./angular-route.js"></script>
-  <script src="./script.js"></script>
+<div ng-view ></div>
+   
 </body>
-
 </html>
