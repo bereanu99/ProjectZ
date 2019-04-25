@@ -15,34 +15,8 @@
 </head>
 
 <body>
-  <!-- Just an image -->
-  <!-- Image and text -->
-  <nav class="navbar  navbar-expand-lg  bg-white">
-    <a class="navbar-brand" href="#">
-      <img src="/src/images/WhatsApp Image 2019-04-25 at 09.44.34.jpeg" width="90" height="50"
-        class="d-inline-block align-top" alt="">
-    </a>
-    <ul class="navbar-nav">
-
-    </ul>
-    <div class="navbar-collapse navbar-expand-lg col-sm-11  ">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item ">
-          <a class="nav-link " href="/components/home.html">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/components/galerie.html">GALERIE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/components/evenimente.html">EVENIMENTE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/components/evenimente.html">CONTACT</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
+ 
+    <div ng-include="'/components/navbar.html'" ></div>
   <div class="jumbotron">
       <h1 class="display-4">Hello, world!</h1>
       <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -50,36 +24,13 @@
       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
       <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </div>
-      <div class="jumbotron">
-          <h1 class="display-4">Hello, world!</h1>
-          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-          <hr class="my-4">
-          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </div>
-        <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-          </div>
-          <div class="jumbotron">
-              <h1 class="display-4">Hello, world!</h1>
-              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-              <hr class="my-4">
-              <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </div>
+    
 
-  <div ng-view id="mainContent"></div>
+  <div ng-view id="mainContent">
+
+    <div ng-include="'/components/navbar.html'" ></div>
+
+  </div>
   <!-- Optional JavaScript -->
   <script src="./angular.js"></script>
   <script src="./angular-route.js"></script>
