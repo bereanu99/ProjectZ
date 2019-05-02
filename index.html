@@ -25,15 +25,10 @@
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
 
-  <!-- My resources -->
-
+  <!-- My CSS resources -->
   <link rel="stylesheet" type="text/css" href="./src/css/index.css">
   <link rel="stylesheet" type="text/css" href="./src/css/footer.css">
-  <script src="./angular.js"></script>
-  <script src="./angular-route.js"></script>
-  <script src="./script.js"></script>
-
-
+  <link rel="stylesheet" type="text/css" href="./src/css/header.css">
   <base href="/">
 
   <title>Hello, world!</title>
@@ -46,6 +41,11 @@
   <div ng-view></div>
 
   <div ng-include="'/components/footer.html'"></div>
+ <!-- My Js resources -->
+  <script src="./angular.js"></script>
+  <script src="./angular-route.js"></script>
+  <script src="./script.js"></script>
+  <script src="./controllers/navController.js"></script>
 </body>
 
 </html>

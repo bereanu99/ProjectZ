@@ -8,7 +8,7 @@ app.config(function($routeProvider,$locationProvider){
     }).when('/home',{
         templateUrl:'./pages/home.html',
         controller:'homeCtrl',
-        
+
     }).when('/galerie',{
         templateUrl:'./pages/galerie.html',
         controller:'galerieCtrl',
@@ -26,6 +26,7 @@ app.config(function($routeProvider,$locationProvider){
         requireBase: false
       });
 })
+
 
 
 app.controller('homeCtrl',function($scope,$location){
