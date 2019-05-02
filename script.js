@@ -1,5 +1,21 @@
 var app = angular.module('main',['ngRoute']);
 
+app.directive("scroll", function ($window) {
+    return function(scope, element, attrs) {
+      
+        angular.element($window).bind("scroll", function() {
+            if (this.pageYOffset >= 40) {
+                 scope.boolChangeClass = true;
+                 console.log('Scrolled below header.');
+                 console.log(this.window.innerWidth)
+             } else {
+                 scope.boolChangeClass = false;
+                 console.log('Header is in view.');
+             }
+            scope.$apply();
+        });
+    };
+});
 app.config(function($routeProvider,$locationProvider){
     $routeProvider.when('/',{
         templateUrl:'./pages/home.html',

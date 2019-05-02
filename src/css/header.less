@@ -1,4 +1,5 @@
 @blue-color: #007BFF;
+@silver-color: rgb(128, 126, 126);
 
 nav .navbar-nav li a {
     font-weight: 450 !important;
@@ -6,11 +7,14 @@ nav .navbar-nav li a {
 }
 
 nav {
-    background-color: #FFF;
+    background-color: transparent;
+    position: absolute !important;
+    width: 100%;
+    z-index: 1030;
 }
 
 nav .navbar-nav li a:hover {
-    color: rgb(128, 126, 126) !important;
+    color: @silver-color  !important;
     padding-bottom: 0px;
     padding-top: 12px;
 }
@@ -25,4 +29,33 @@ nav .navbar-nav li a:hover {
 .activer {
     padding-bottom: 0px;
     border-bottom: 3px solid @blue-color;
+}
+
+.nav-upper-item {
+
+    font-size: .875em !important;
+}
+
+.nav-upper-item li {
+    color: #FFF;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: baseline !important;
+
+    .fa {
+        color: rgb(143, 138, 138);
+        font-size: 25px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        padding-top: 7px !important;
+        padding-bottom: 7px !important;
+    }
+}
+
+.scrollColor {
+    background-color: #FFF;
+    transition: 0.2s;
+    position: fixed !important;
+    top: 0px;
+    width: 100%;
 }

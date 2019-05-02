@@ -3,7 +3,10 @@ nav .navbar-nav li a {
   color: #000000;
 }
 nav {
-  background-color: #FFF;
+  background-color: transparent;
+  position: absolute !important;
+  width: 100%;
+  z-index: 1030;
 }
 nav .navbar-nav li a:hover {
   color: #807e7e !important;
@@ -19,4 +22,28 @@ nav .navbar-nav li a:hover {
 .activer {
   padding-bottom: 0px;
   border-bottom: 3px solid #007BFF;
+}
+.nav-upper-item {
+  font-size: .875em !important;
+}
+.nav-upper-item li {
+  color: #FFF;
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: baseline !important;
+}
+.nav-upper-item li .fa {
+  color: #8f8a8a;
+  font-size: 25px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+.scrollColor {
+  background-color: #FFF;
+  transition: 0.2s;
+  position: fixed !important;
+  top: 0px;
+  width: 100%;
 }
