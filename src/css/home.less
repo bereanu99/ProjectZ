@@ -36,3 +36,28 @@
 h2 {
     text-decoration: underline;
 }
+
+// iframe 2
+
+.background-video-container {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  pointer-events: none;
+}
+
+.background-video-iframe{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
