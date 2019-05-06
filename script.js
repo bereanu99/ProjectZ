@@ -46,7 +46,11 @@ app.config(function ($routeProvider, $locationProvider) {
     }).when('/contact', {
         templateUrl: './pages/contact.html',
         controller: 'contactCtrl',
+    }).when('/admin', {
+        templateUrl: './pages/admin.html',
+        controller: 'adminCtrl',
     })
+
     $locationProvider.html5Mode({
         enabled: true,
         requireBase: false
