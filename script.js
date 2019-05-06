@@ -57,7 +57,6 @@ app.config(function ($routeProvider, $locationProvider) {
 
 app.controller('homeCtrl', function ($scope, $location) {
     $scope.message = "homeCTRl";
-
 })
 
 app.controller('galerieCtrl', function ($scope, $location) {
