@@ -1,13 +1,13 @@
 var app = angular.module('main', ['ngRoute']);
 
-app.run(['$window', '$rootScope', function($window, $rootScope) {
+app.run(['$window', '$rootScope', function ($window, $rootScope) {
     $rootScope.windowWidth = window.innerWidth;
-    window.addEventListener('resize', function() {
-        $rootScope.$apply(function() {
+    window.addEventListener('resize', function () {
+        $rootScope.$apply(function () {
             $rootScope.windowWidth = window.innerWidth;
-            console.log( $rootScope.windowWidth);
+            console.log($rootScope.windowWidth);
         });
-     
+
     });
 }]);
 
@@ -15,7 +15,7 @@ app.directive("scroll", function ($window) {
     return function (scope, element, attrs) {
         angular.element($window).bind("scroll", function () {
 
-            if (this.pageYOffset >= 35 ) {
+            if (this.pageYOffset >= 35) {
                 scope.boolChangeClass = true;
 
             } else {
@@ -49,6 +49,10 @@ app.config(function ($routeProvider, $locationProvider) {
     }).when('/admin', {
         templateUrl: './pages/admin.html',
         controller: 'adminCtrl',
+    }).when('/test', {
+        templateUrl: './pages/test.html',
+        controller: 'testCtrl',
+
     })
 
     $locationProvider.html5Mode({
@@ -71,6 +75,64 @@ app.controller('evenimenteCtrl', function ($scope, $location) {
     $scope.message = "evenimenteCtrl";
 })
 
-app.controller('contactCtrl', function ($scope, $location) {
-    $scope.message = "contactCtrl";
+app.controller('contactCtrl', function ($scope, $http) {
+    $scope.insert = {};
+    $scope.insertData = function () {
+
+        $http.post('http://localhost:3000/backend/roombook.php',angular.toJson({
+            'name': $scope.name,
+            'email': $scope.email,
+            'age': $scope.age})).then(function succes(res) {
+            console.log(res);
+            alert('merge')
+        }, function (res) {
+            console.log(res);
+            alert('nu merge')
+            $scope.insert = null;
+            $scope.errorFirstname = null;
+            $scope.errorLastname = null;
+        }, );
+    };
+});
+
+app.controller('adminCtrl', function ($scope, $http) {
+    $http.get("server.php").then(function (response) {
+
+        $scope.products = response.data;
+        console.log(response.status);
+    });
+});
+
+
+app.controller('testCtrl', function ($scope, $http) {
+    $scope.btnName = "Trimite";
+    var data1 = {
+        'name': $scope.name,
+        'email': $scope.email,
+        'age': $scope.age,
+        'btnName': $scope.btnName,
+        'id': $scope.id,
+    };
+    $scope.insert = function () {
+        if ($scope.name == null) {
+            alert("baga nume jegosule");
+        } else {
+            $http.post('http://localhost:3000/insert', angular.toJson({
+                'name': $scope.name,
+                'email': $scope.email,
+                'age': $scope.age,
+                'btnName': $scope.btnName,
+                'id': $scope.id,
+            })).then(function (response) {
+                if (response.data)
+                    console.log(response.data);
+                alert(mere);
+                $scope.msg = "Post Data Submitted Successfully!";
+
+            }, function (response) {
+                console.log(response.data);
+                $scope.msg = "Service not Exists";
+            })
+        }
+    }
 })

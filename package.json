@@ -1,12 +1,24 @@
 {
-  "name": "angularjs-mysql",
+  "name": "projectz",
   "version": "1.0.0",
-  "description": "Hotel web application for uni project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lite-server"
+  "description": "ProjectZ",
+  "main": "angular-route.js",
+  "dependencies": {
+    "lite-server": "^2.4.0"
   },
-  "author": "MariusBrinzaru",
-  "license": "ISC"
+  "devDependencies": {},
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bereanu99/ProjectZ.git"
+  },
+  "author": "Mariusb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bereanu99/ProjectZ/issues"
+  },
+  "homepage": "https://github.com/bereanu99/ProjectZ#readme"
 }

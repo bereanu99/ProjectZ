@@ -1,0 +1,41 @@
+<div ng-controller="testCtrl" ng-init="show_data()">
+    <div class="col-md-6">
+        <label>name</label>
+        <input type="text" name="name" ng-model="name" class="form-control">
+        <br>
+        <label>email</label>
+        <input type="text" name="email" ng-model="email" class="form-control">
+        <br>
+        <label for="">age</label>
+        <input type="text" name="age" ng-model="age" class="form-control">
+        <br>
+        <input type="hidden" ng-model="id">
+        <input type="button" name="Insert" class="btn btn-primary" ng-click="insert()" value="{{btnName}}">
+    </div>
+</div>
+<table class="table table-bordered">
+    <tr>
+        <th>S.no</th>
+        <th>Name</th>
+        <th>Emaik</th>
+        <th>Age</th>
+        <th>edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr ng-repeat="x in names">
+        <td>{{x.id}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.age}}</td>
+
+        
+        <td><button class="btn btn-succes bt-xs" ng-click="update_data(x.id,x.name,x.email,x.age)">
+                <span class="glyphicon glyphicon-edit"></span>edit
+            </button></td>
+        <td>
+            <button class="btn btn-danger bt-xs" ng-click="delete_data(x.id)">
+                <span class="glyphicon glyphicon-trash"></span>delete
+            </button>
+        </td>
+    </tr>
+</table>
