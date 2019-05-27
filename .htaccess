@@ -1,0 +1,8 @@
+RewriteEngine On 
+
+RewriteCond %{REQUEST_FILENME} -s [OR]
+RewriteCond %{REQUEST_FILENME} -l [OR]
+RewriteCond %{REQUEST_FILENME} -d 
+RewriteRule ^.*$ - [NC,L]
+
+RewriteRule ^(.*) /index.html [NC,L]
